@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Engenharia Elétrica</title>
+		<link rel="icon" href="imagens/icon13.png" type="image/x-icon" />
+		<link rel="shortcut icon" href="imagens/icon13.png" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Experiência profissional', 'Pequena empresa', 'Média empresa', 'Grande empresa'],
+          ['Trainee', 3615, 4700, 6110],
+          ['Junior', 4519, 5875, 7637],
+          ['Pleno', 5649, 7344, 9547],
+          ['Senior', 7061, 9180, 11934],
+          ['Master', 8826, 11475, 14917]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Gráfico de experiência profissional',
+            subtitle: 'média por tipo de empresa',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+	</head>
+	<body>
+		<nav id="menu">
+			<ul>
+				<li><a href="engenharia.html">Engenharia</a></li>
+				<li><a href="#02">O que é engenharia elétrica</a></li>
+				<li><a href="imagens.html">Imagens</a></li>
+				<li><a href="#04">Matriz curricular</a></li>
+				<li><a href="salarios.html">Salários</a></li>
+			</ul>
+		</nav>
+		<section name="01" id="topo">
+			<img src="imagens/topo.jpg" id="imgtopo">
+		
+		<section id="Salarios">
+			<h1>Salários</h1>
+			 <center><div id="columnchart_material" style="width: 800px; height: 500px;"></div></center>
+			<p>As informações da tabela acima são referentes ao salário médio de um Engenheiro Elétrico, considerando o porte da empresa e tempo de experiência do profissional.</p>
+			<p>As informações foram retiradas do SINE - Site Nacional de Empregos, um serviço que atua em todo o Brasil como classificado online de vagas de emprego, promovendo o contato entre empregador e trabalhador.</p>
+		</section>
+		<footer class="footer">
+			<p>@Vinnycius Medina - 2019</p>
+		</footer>
+	</body>
+</html>
